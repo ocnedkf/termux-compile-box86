@@ -53,9 +53,9 @@ git clone -b v0.3.2 http://github.com/ptitSeb/box86.git”
 <br>
 输入：
 <br>
-cd
+“cd
 <br>
-“cd box86
+cd box86
 <br>
 mkdir build
 <br>
