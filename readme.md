@@ -31,7 +31,7 @@ proot-distro install ubuntu-oldlts
 <br>
 “apt update && apt install git cmake build-essential gcc python3”
 <br>
-七，补充运行box86做必要的arm依赖库
+七，补充运行box86所必要的arm依赖库
 <br>
 输入：
 <br>
