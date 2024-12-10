@@ -64,6 +64,8 @@ proot-distro install ubuntu-oldlts
 <br>
 开始编译，需要一段很长的时间，等待编译完成后即可使用
 <br>
+有任何问题可创建议题提问
+<br>
 ## 验证编译成果
 一，紧接上面步骤输入
 <br>
