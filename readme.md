@@ -43,7 +43,9 @@ proot-distro install ubuntu-oldlts
 <br>
 输入：
 <br>
-“git clone -b v0.3.2 http://github.com/ptitSeb/box86.git”
+“cd
+<br>
+git clone -b v0.3.2 http://github.com/ptitSeb/box86.git”
 <br>
 （出现的警告忽略即可）
 <br>
@@ -51,7 +53,15 @@ proot-distro install ubuntu-oldlts
 <br>
 输入：
 <br>
-“cmake .. \
+cd
+<br>
+“cd box86
+<br>
+mkdir build
+<br>
+cd build
+<br>
+cmake .. \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_SYSTEM_NAME=Linux \
     -DCMAKE_SYSTEM_PROCESSOR=arm \
