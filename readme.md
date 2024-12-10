@@ -73,7 +73,7 @@ proot-distro install ubuntu-oldlts
 <br>
 二，你可使用wine来验证box86可用性，输入
 <br>
-startx box86 wine explorer
+startx && box86 wine explorer
 <br>
 若成功会显示更新c盘的窗口
 <br>
