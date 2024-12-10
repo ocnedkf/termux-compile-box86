@@ -1,4 +1,5 @@
 此仓库主要介绍一个如何在termux上手动编译box86的方案
+<br>
 下面开始介绍步骤：
 ## 操作步骤
 一，下载termux并安装，termux可从google play商店或termux-app的github项目中的发行版下载最新版本
@@ -13,9 +14,9 @@
 <br>
 “pkg update && pkg install proot-distro”
 <br>
-四，在proot-distro中安装老版本ubuntu（需要等待一段时间）
+四，在proot-distro中安装旧版本ubuntu（需要等待一段时间）
 <br>
-proot-distro install ubuntu-oldlts
+“proot-distro install ubuntu-oldlts”
 <br>
 五，进入ubuntu
 <br>
@@ -101,4 +102,5 @@ export BOX86_LD_LIBRARY_PATH=/opt/wine/lib”
 <br>
 注意：/opt/wine/bin与/opt/wine/lib需要替换到wine的实际路径，并且wine不可在非ubuntu内路径执行
 <br>
-完
+## 注意事项
+1.下载过程中或出现下载速度过慢的情况可尝试使用VPN改善下载速度
