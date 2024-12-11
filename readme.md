@@ -48,7 +48,7 @@
 <br>
 “git clone -b v0.3.2 http://github.com/ptitSeb/box86.git”
 <br>
-（出现的警告忽略即可）
+(出现的警告忽略即可）
 <br>
 九，编译box86
 <br>
