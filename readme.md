@@ -46,7 +46,7 @@
 <br>
 “cd
 <br>
-git clone -b v0.3.2 http://github.com/ptitSeb/box86.git”
+“git clone -b v0.3.2 http://github.com/ptitSeb/box86.git”
 <br>
 （出现的警告忽略即可）
 <br>
@@ -71,7 +71,7 @@ cmake .. \
 <br>
 不要出现任何的字母偏差并执行，等待配置完成（返回root@localhost:~/box86/build#)后输入：
 <br>
-“make”
+“cmake --build . -j $(nproc)”
 <br>
 开始编译，需要一段很长的时间，等待编译完成后即可使用
 <br>
@@ -106,3 +106,9 @@ export BOX86_LD_LIBRARY_PATH=/opt/wine/lib”
 <br>
 ## 注意事项
 1.下载过程中或出现下载速度过慢的情况可尝试使用VPN改善下载速度
+<br>
+2.如果在执行第八步出现延迟过大的报错时可改成：
+<br>
+“git clone -b v0.3.2 http://bgithub.xyz/ptitSeb/box86.git”
+<br>
+并取消使用VPN
