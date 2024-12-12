@@ -123,6 +123,7 @@ Do you want to continue? [Y/n]
 <br>
 首先，各位要清楚一个问题，所有的东西并不是版本越新越好，这包括box86，如果直接默认下载box86会出现编译错误(error1与error2)，如果你的技术可以不妨尝试手动修改最新版box86源代码再编译
 <br>
+<br>
 问：
 <br>
 为什么要选择旧版本的ubuntu？
@@ -130,6 +131,7 @@ Do you want to continue? [Y/n]
 答：
 <br>
 这么做是有前车之鉴的哦，如果直接选择目前最新的24.04的ubuntu的话是会遇到libc段错误，这样前面做的都付之东流了
+<br>
 <br>
 问：
 <br>
