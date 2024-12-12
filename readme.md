@@ -2,9 +2,9 @@
 <br>
 下面开始介绍步骤：
 ## 操作步骤
-一，下载Termux并安装，termux可从google play商店或termux-app的github项目中的发行版下载最新版本
+一，下载Termux并安装，Termux可从google play商店或termux-app的github项目中的发行版下载最新版本
 <br>
-二，打开termux，赋予通知权限，输入
+二，打开Termux，赋予通知权限，输入
 <br>
 “termux-setup-storage”
 <br>
