@@ -32,13 +32,11 @@
 <br>
 “apt update && apt install git cmake build-essential gcc python3”
 <br>
-七，补充运行box86所必要的arm依赖库
+七，补充编译box86所必要的arm依赖库
 <br>
 输入：
 <br>
-“dpkg --add-architecture armhf && apt -y install libncurses6:armhf libc6:armhf libx11-6:armhf libgdk-pixbuf2.0-0:armhf libgtk2.0-0:armhf libstdc++6:armhf libsdl2-2.0-0:armhf mesa-va-drivers:armhf libsdl1.2-dev:armhf libsdl-mixer1.2:armhf libpng16-16:armhf libcal3d12v5:armhf libsdl2-net-2.0-0:armhf libopenal1:armhf libsdl2-image-2.0-0:armhf libvorbis-dev:armhf libcurl4:armhf libjpeg62:armhf libudev1:armhf libgl1-mesa-dev:armhf libx11-dev:armhf libsmpeg0:armhf libavcodec58:armhf libavformat58:armhf libswscale5:armhf libsdl2-image-2.0-0:armhf libsdl2-mixer-2.0-0:armhf gcc-arm-linux-gnueabihf”
-<br>
-此步骤需要大量时间下载与安装
+“dpkg --add-architecture armhf && apt -y gcc-arm-linux-gnueabihf”
 <br>
 八，下载box86
 <br>
@@ -67,7 +65,7 @@ cmake .. \
     -DCMAKE_SYSTEM_NAME=Linux \
     -DCMAKE_SYSTEM_PROCESSOR=arm \
     -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc \
-    -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++”
+    -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++
 <br>
 不要出现任何的字母偏差并执行，等待配置完成（返回root@localhost:~/box86/build#)后输入：
 <br>
