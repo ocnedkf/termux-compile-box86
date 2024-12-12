@@ -60,7 +60,7 @@ mkdir build
 <br>
 cd build
 <br>
-“cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=arm -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++ -DBAD_SIGNAL=ON”
+cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=arm -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++ -DBAD_SIGNAL=ON”
 <br>
 不要出现任何的字母偏差并执行，等待配置完成（返回root@localhost:~/box86/build#)后输入：
 <br>
