@@ -112,3 +112,9 @@ export BOX86_LD_LIBRARY_PATH=/opt/wine/lib”
 “git clone -b v0.3.2 http://bgithub.xyz/ptitSeb/box86.git”
 <br>
 并取消使用VPN
+<br>
+3.在上述执行下载步骤时均会遇到以下提示
+<br>
+Do you want to continue? [Y/n]
+<br>
+这里务必输入“y”才可下载，每次都需要重复执行，无须担心，但需要注意下载后和解压后需要的空间，以防手机空间不足
