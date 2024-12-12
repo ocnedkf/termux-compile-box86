@@ -2,7 +2,7 @@
 <br>
 下面开始介绍步骤：
 ## 操作步骤
-一，下载termux并安装，termux可从google play商店或termux-app的github项目中的发行版下载最新版本
+一，下载Termux并安装，termux可从google play商店或termux-app的github项目中的发行版下载最新版本
 <br>
 二，打开termux，赋予通知权限，输入
 <br>
@@ -85,7 +85,7 @@ startx && box86 wine explorer
 <br>
 若成功会显示更新c盘的窗口
 <br>
-执行此步骤前务必记住配置box86环境变量与wine的可执行文件权限，并且必须配置显示器，可用termux:x11或VNC并下载对应的程序，这里举例box86环境变量与给予权限步骤：
+执行此步骤前务必记住配置box86环境变量与wine的可执行文件权限，并且必须配置显示器，可用Termux:X11或VNC并下载对应的程序，这里举例box86环境变量与给予权限步骤：
 <br>
 “cd /opt/wine/bin 
 <br>
