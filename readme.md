@@ -4,7 +4,7 @@
 ## 操作步骤
 一，下载Termux并安装，Termux可从google play商店或termux-app的github项目中的发行版下载最新版本
 <br>
-二，打开Termux，赋予通知权限，输入
+二，打开Termux，赋予通知权限，输入并执行：
 <br>
 “termux-setup-storage”
 <br>
@@ -20,7 +20,7 @@
 <br>
 五，进入ubuntu
 <br>
-输入：
+输入并执行：
 <br>
 “proot-distro login ubuntu-oldlts”
 <br>
@@ -28,19 +28,19 @@
 <br>
 六，安装必要的编译程序
 <br>
-输入：
+输入并执行：
 <br>
 “apt update && apt install git cmake build-essential gcc python3”
 <br>
 七，补充编译box86所必要的arm依赖库
 <br>
-输入：
+输入并执行：
 <br>
 “dpkg --add-architecture armhf &&  apt update && apt -y gcc-arm-linux-gnueabihf”
 <br>
 八，下载box86(以0.3.2版本举例，如果想编译最新版本，更改v后面对应的版本号)
 <br>
-输入：
+输入并执行：
 <br>
 “cd
 <br>
@@ -52,7 +52,7 @@
 <br>
 编译DEBUG版本↓
 <br>
-输入：
+输入并执行：
 <br>
 “cd
 <br>
@@ -67,7 +67,7 @@ cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYS
 <br>
 编译Release版本↓
 <br>
-输入：
+输入并执行：
 <br>
 “cd
 <br>
@@ -92,13 +92,13 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PRO
 现编译过程说明错误已全部拨乱反正，有任何问题可创建议题提问
 <br>
 ## 验证编译成果
-一，紧接上面步骤输入
+一，紧接上面步骤输入并执行：
 <br>
 “make install”
 <br>
 以安装box86
 <br>
-二，你可使用wine来验证box86可用性，输入
+二，你可使用wine来验证box86可用性，输入并执行：
 <br>
 startx && box86 wine explorer
 <br>
@@ -119,26 +119,26 @@ export BOX86_LD_LIBRARY_PATH=/opt/wine/lib”
 ## 注意事项
 1.下载过程中或出现下载速度过慢的情况可尝试使用VPN改善下载速度
 <br>
-2.如果在执行第八步出现延迟过大的报错时可改成：
+2.如果在执行第八步出现延迟过大的报错时可关闭VPN，将命令改成：
 <br>
 “git clone -b v0.3.2 https://bgithub.xyz/ptitSeb/box86.git ”
 <br>
-并取消使用VPN
+并执行
 <br>
 3.在上述执行下载步骤时均会遇到以下提示
 <br>
 Do you want to continue? [Y/n]
 <br>
-这里务必输入“y”才可下载，每次都需要重复执行，无须担心，但需要注意下载后和解压后需要的空间，以防手机空间不足
+这里务必输入“y”并执行才可下载，每次都需要重复执行，无须担心，但需要注意下载后和解压后需要的空间，以防手机空间不足
 <br>
-4.如果你想选择直接编译并非跨架构编译，你需要选择下载大概0.3版本以上的box86并将第九步改成
+4.如果你想选择直接编译并非跨架构编译，你需要选择下载大概0.3版本以上的box86并将第九步改成：
 “cmake .. -DARM64=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBAD_SIGNAL=ON”
 <br>
 或
 <br>
 “cmake .. -DARM64=1 -DCMAKE_BUILD_TYPE=Release -DBAD_SIGNAL=ON”
 <br>
-即可
+再执行即可
 <br>
 ## 疑惑解答
 问：
