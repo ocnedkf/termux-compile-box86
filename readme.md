@@ -89,7 +89,7 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PRO
 你可使用“cp”命令把当前目录下所有文件全部复制到其他目录以导出
 <br>
 <br>
-现编译过程说明错误已全部拨乱反正，有任何问题可创建议题提问
+现编译过程说明错误已全部拨乱反正，有任何问题可创建议题提问，欢迎任何人对教程指出问题或提问
 <br>
 ## 验证编译成果
 一，紧接上面步骤输入并执行：
