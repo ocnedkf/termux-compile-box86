@@ -36,7 +36,7 @@
 <br>
 输入：
 <br>
-“dpkg --add-architecture armhf && apt -y gcc-arm-linux-gnueabihf”
+“dpkg --add-architecture armhf &&  apt update && apt -y gcc-arm-linux-gnueabihf”
 <br>
 八，下载box86(以0.3.2版本举例，如果想编译最新版本，更改v后面对应的版本号)
 <br>
