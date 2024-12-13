@@ -131,14 +131,17 @@ Do you want to continue? [Y/n]
 <br>
 这里务必输入“y”并执行才可下载，每次都需要重复执行，无须担心，但需要注意下载后和解压后需要的空间，以防手机空间不足
 <br>
-4.如果你想选择直接编译并非跨架构编译，你需要选择下载大概0.3版本以上的box86并将第九步改成：
+4.如果你想选择直接编译并非跨架构编译，你需要选择下载大概0.3版本以上的box86，并需要把第九步改成：
+<br>
 “cmake .. -DARM64=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBAD_SIGNAL=ON”
 <br>
 或
 <br>
 “cmake .. -DARM64=1 -DCMAKE_BUILD_TYPE=Release -DBAD_SIGNAL=ON”
 <br>
-再执行即可
+其中再执行即可
+<br>
+5.此仓库中以编译0.3.2版本举例，如果你需要编译特定的版本，你要把第八步中v后面改成你想要编译的版本，若为新版本可能还要改源代码或以直接编译方式而并非跨架构方式编译以避免编译中可能产生的错误，这里要考虑到这两步可能都要一起做
 <br>
 ## 疑惑解答
 问：
@@ -169,7 +172,7 @@ Do you want to continue? [Y/n]
 <br>
 答：
 <br>
-为了避免遇到error1与error2的报错失败和大量的警告
+为了设置跨架构编译以避免遇到error1与error2的报错失败和大量的警告
 <br>
 <br>
 问：设置“-DBAD_SIGNAL=ON”变量有什么用？
