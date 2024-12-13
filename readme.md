@@ -50,6 +50,8 @@
 <br>
 九，编译box86
 <br>
+编译DEBUG版本↓
+<br>
 输入：
 <br>
 “cd
@@ -62,7 +64,25 @@ cd build
 <br>
 cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=arm -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++ -DBAD_SIGNAL=ON”
 <br>
-不要出现任何的字母偏差并执行，等待配置完成（返回root@localhost:~/box86/build#)后输入：
+<br>
+-------------------------------------------
+<br>
+<br>
+编译Release版本↓
+<br>
+输入：
+<br>
+“cd
+<br>
+cd box86
+<br>
+mkdir build
+<br>
+cd build
+<br>
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=arm -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++ -DBAD_SIGNAL=ON”
+<br>
+选择DEBUG和Release的其中一个版本以配置编译变量，不要出现任何的字母偏差并执行，等待配置完成（返回root@localhost:~/box86/build#)后输入：
 <br>
 “cmake --build . -j $(nproc)”
 <br>
