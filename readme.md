@@ -44,7 +44,7 @@
 <br>
 “cd
 <br>
-“git clone -b v0.3.2 https://github.com/ptitSeb/box86.git”
+“git clone -b v0.3.2 https://github.com/ptitSeb/box86.git ”
 <br>
 (出现的警告忽略即可）
 <br>
@@ -121,7 +121,7 @@ export BOX86_LD_LIBRARY_PATH=/opt/wine/lib”
 <br>
 2.如果在执行第八步出现延迟过大的报错时可改成：
 <br>
-“git clone -b v0.3.2 https://bgithub.xyz/ptitSeb/box86.git”
+“git clone -b v0.3.2 https://bgithub.xyz/ptitSeb/box86.git ”
 <br>
 并取消使用VPN
 <br>
@@ -140,7 +140,7 @@ Do you want to continue? [Y/n]
 <br>
 首先，各位要清楚一个问题，所有的东西并不是版本越新越好，这包括box86，如果直接默认下载box86会出现编译错误(error1与error2)，而这只是通过正常的编译步骤去编译，要想排查最新版box86的故障，必须得利用git checkout命令，跳转到指定的某条提交，然后加以锁定具体原因并更改，如此才能具备编译最新版box86的能力，编译最新版不是光知道编译命令就行的。如果你的技术可以，那么你可以把第八步改成：
 <br>
-“git clone https://github.com/ptitSeb/box86”
+“git clone https://github.com/ptitSeb/box86 ”
 <br>
 并通过git checkout命令找出错误点后尝试更改其源代码再继续进行编译
 <br>
