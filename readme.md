@@ -131,6 +131,15 @@ Do you want to continue? [Y/n]
 <br>
 这里务必输入“y”才可下载，每次都需要重复执行，无须担心，但需要注意下载后和解压后需要的空间，以防手机空间不足
 <br>
+4.如果你想选择直接编译并非跨架构编译，你需要选择下载大概0.3版本以上的box86并将第九步改成
+cmake .. -DARM64=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo
+<br>
+或
+<br>
+cmake .. -DARM64=1 -DCMAKE_BUILD_TYPE=Release
+<br>
+即可
+<br>
 ## 疑惑解答
 问：
 <br>
