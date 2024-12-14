@@ -2,7 +2,7 @@
 <br>
 下面开始介绍步骤：
 ## 操作步骤
-一，下载Termux并安装，Termux可从google play商店或termux-app的github项目中的发行版下载最新版本
+一，下载Termux并安装，Termux可从Google Play商店或termux-app的github项目中的发行版下载最新版本
 <br>
 二，打开Termux，赋予通知权限，输入并执行：
 <br>
@@ -139,9 +139,11 @@ Do you want to continue? [Y/n]
 <br>
 “cmake .. -DARM64=1 -DCMAKE_BUILD_TYPE=Release -DBAD_SIGNAL=ON”
 <br>
-其中再执行即可
+其中再执行即可，这里可能还需注意疑惑解答中的第一条
 <br>
 5.此仓库中以编译0.3.2版本举例，如果你需要编译特定的版本，你要把第八步中v后面改成你想要编译的版本，若为新版本可能还要改源代码或以直接编译方式而并非跨架构方式编译以避免编译中可能产生的错误，这里要考虑到这两步可能都要一起做
+<br>
+6.如果想要不动源码去编译出正常的box86，你只能编译大概0.3.2及以下的版本
 <br>
 ## 疑惑解答
 问：
