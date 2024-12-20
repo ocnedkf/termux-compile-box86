@@ -36,7 +36,7 @@
 <br>
 输入并执行：
 <br>
-“dpkg --add-architecture armhf &&  apt update && apt -y gcc-arm-linux-gnueabihf”
+“dpkg --add-architecture armhf &&  apt update && apt install gcc-arm-linux-gnueabihf”
 <br>
 八，下载box86(以0.3.2版本举例)
 <br>
@@ -98,13 +98,15 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PRO
 <br>
 以安装box86
 <br>
-二，你可使用wine来验证box86可用性，输入并执行：
+二，你可使用wine来验证box86可用性，以“xorg”和“openbox”运行x11，输入并执行：
 <br>
-startx && box86 wine explorer
+apt-get update && apt-get install xorg openbox
+<br>
+startx box86 wine explorer
 <br>
 若成功会显示更新c盘的窗口
 <br>
-执行此步骤前务必记住配置box86环境变量与wine的可执行文件权限，并且必须配置显示器，可用Termux:X11或VNC并下载对应的程序，这里举例box86环境变量与给予权限步骤：
+执行此步骤前务必记住配置box86环境变量与wine的可执行文件权限，并且必须配置显示器，可用xorg和openbox程序与Termux:X11或VNC并下载对应的程序和apk，这里举例box86环境变量与给予权限步骤：
 <br>
 “cd /opt/wine/bin 
 <br>
