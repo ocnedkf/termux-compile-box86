@@ -44,7 +44,7 @@
 <br>
 “cd
 <br>
-“git clone -b v0.3.2 https://github.com/ptitSeb/box86.git ”
+“git clone -b v0.3.2 https://github.com/ptitSeb/box86 ”
 <br>
 (出现的警告忽略即可）
 <br>
