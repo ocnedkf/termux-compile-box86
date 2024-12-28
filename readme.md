@@ -98,15 +98,15 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PRO
 <br>
 以安装box86
 <br>
-二，你可使用wine来验证box86可用性，以“xorg”和“openbox”运行x11，输入并执行：
+二，你可使用wine来验证box86可用性，用termux:x11显示x11，输入并执行：
 <br>
-apt-get update && apt-get install xorg openbox
+git clone --recurse-submodules https://github.com/termux/termux-x11
 <br>
-startx box86 wine explorer
+termux-x11 :1 -xstartup "box86 wine explorer /desktop=1270x720 explorer"
 <br>
-若成功会显示更新c盘的窗口
+执行后退出termux并打开termux:x11，若成功会显示更新c盘的窗口
 <br>
-执行此步骤前务必记住配置box86环境变量与wine的可执行文件权限，并且必须配置显示器，可用xorg和openbox程序与Termux:X11或VNC并下载对应的程序和apk，这里举例box86环境变量与给予权限步骤：
+执行此步骤前务必记住配置box86环境变量与wine的可执行文件权限，下面为设置box86环境变量与给予权限步骤：
 <br>
 “cd /opt/wine/bin 
 <br>
