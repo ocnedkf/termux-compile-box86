@@ -103,6 +103,7 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PRO
 以确保box86能正常运行
 <br>
 三，你可通过实施两种方案的其中一个验证box86:
+<br>
 (1) 通过让box86返回版本信息以验证
 <br>
 输入并执行：
