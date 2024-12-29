@@ -36,7 +36,7 @@
 <br>
 输入并执行：
 <br>
-“dpkg --add-architecture armhf &&  apt update && apt install gcc-arm-linux-gnueabihf”
+“dpkg --add-architecture armhf && apt update && apt install gcc-arm-linux-gnueabihf”
 <br>
 八，下载box86(以0.3.2版本举例)
 <br>
@@ -98,15 +98,22 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PRO
 <br>
 以安装box86
 <br>
-二，你可使用wine来验证box86可用性，用termux:x11显示x11，输入并执行：
+二，补充运行box86的依赖库，输入并执行：
+“dpkg --add-architecture armhf && apt update && apt install libc6:armhf libstdc++6:armhf libx11-6:armhf libgl1-mesa-glx:armhf libpulse0:armhf libappindicator1:armhf libnm0:armhf”
+以确保box86能正常运行
 <br>
-git clone --recurse-submodules https://github.com/termux/termux-x11
+三，你可通过实施两种方案的其中一个验证box86:
+(1) 通过让box86返回版本信息以验证
 <br>
-termux-x11 :1 -xstartup "box86 wine explorer /desktop=1270x720 explorer"
+输入并执行：
+“box86 --version”
 <br>
-执行后退出termux并打开termux:x11，若成功会显示更新c盘的窗口
+若返回日期，即为验证成功
 <br>
-执行此步骤前务必记住配置box86环境变量与wine的可执行文件权限，下面为设置box86环境变量与给予权限步骤：
+<br>
+(2) 使用wine来验证box86可用性，用termux:x11显示x11，但在这之前需要配置权限与环境变量
+<br>
+输入并执行：
 <br>
 “cd /opt/wine/bin 
 <br>
@@ -116,7 +123,15 @@ export BOX86_PATH=/opt/wine/bin
 <br>
 export BOX86_LD_LIBRARY_PATH=/opt/wine/lib”
 <br>
-注意：/opt/wine/bin与/opt/wine/lib需要替换到wine的实际路径，并且wine不可在非ubuntu内路径执行
+将“/opt/wine/bin”和“/opt/wine/lib”替换成实际路径，并要注意wine不可在非ubuntu环境内
+<br>
+在配置完成后输入并执行：
+<br>
+git clone --recurse-submodules https://github.com/termux/termux-x11
+<br>
+termux-x11 :1 -xstartup "box86 wine explorer /desktop=1270x720 explorer"
+<br>
+在执行后打开Termux:X11(不要关闭Termux)，若成功会显示文件管理器的窗口
 <br>
 ## 注意事项
 1.下载过程中或出现下载速度过慢的情况可尝试使用VPN改善下载速度
