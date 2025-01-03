@@ -239,7 +239,6 @@ proot-distro
 官方网站：https://github.com/termux/proot-distro
 
 ## 验证box86时涉及的第三方app：
-<br>
 Termux:X11
 <br>
 文章中作用：作为X服务器，确保在验证box86运行Wine时，使Wine能够识别并连接到显示环境，避免因无显示器问题误判编译结果
