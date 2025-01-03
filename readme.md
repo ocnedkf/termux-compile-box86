@@ -246,7 +246,7 @@ termux
 <br>
 官方网站: https://termux.com/
 
-## 验证box86时涉及的第三方app：
+## 验证时涉及的第三方app：
 Termux:X11
 <br>
 文章中作用：作为X服务器，确保在验证box86运行Wine时，使Wine能够识别并连接到显示环境，避免因无显示器问题误判编译结果
