@@ -236,7 +236,7 @@ proot-distro
 文章中作用：在Termux中创建一个完整的Linux环境，以便在Android设备上执行编译与Linux程序
 <br>
 官方网站：https://github.com/termux/proot-distro
-<br>
+
 ## 验证box86时涉及的第三方app：
 <br>
 Termux:X11
