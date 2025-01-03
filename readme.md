@@ -214,7 +214,7 @@ cmake
 <br>
 git
 <br>
-文章中作用：用于从GitHub仓库克隆box86的源代码，是获取源代码的必要工具
+文章中作用：用于从GitHub仓库克隆box86的源代码，是在linux环境中直接获取源代码的必要工具，简化了获取box86源代码的步骤
 <br>
 官方网站：https://git-scm.com/
 <br>
