@@ -104,17 +104,19 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PRO
 <br>
 三，你可通过实施两种方案的其中一个验证box86:
 <br>
-(1) 通过让box86返回版本信息以验证
+方案1  通过让box86返回版本信息以验证
 <br>
 输入并执行：
 “box86 --version”
 <br>
-若返回日期，即为验证成功
+若命令返回版本信息，则验证成功
 <br>
 <br>
-(2) 使用wine来验证box86可用性，用termux:x11显示x11，但在这之前需要配置权限与环境变量
+方案2  运行wine以验证box86可用性
 <br>
-输入并执行：
+为了通过box86运行Wine，需依赖Termux:X11来显示X11窗口，这之前需先配置相应的权限与环境变量。以下为详细步骤：
+<br>
+步骤1 配置Wine的运行权限与环境变量，输入并执行：
 <br>
 “cd /opt/wine/bin 
 <br>
@@ -126,13 +128,19 @@ export BOX86_LD_LIBRARY_PATH=/opt/wine/lib”
 <br>
 将“/opt/wine/bin”和“/opt/wine/lib”替换成实际路径，并要注意wine不可在非ubuntu环境内
 <br>
-在配置完成后输入并执行：
+<br>
+步骤2 安装Termux:X11程序：
 <br>
 git clone --recurse-submodules https://github.com/termux/termux-x11
 <br>
+等待命令完全执行完成，以确保Termux:X11程序的正确安装
+<br>
+<br>
+步骤3 使用以下命令启动Termux:X11，并运行box86与wine：
+<br>
 termux-x11 :1 -xstartup "box86 wine explorer /desktop=1270x720 explorer"
 <br>
-在执行后打开Termux:X11(不要关闭Termux)，若成功会显示文件管理器的窗口
+启动后，保持Termux运行并打开Termux:X11。如果运行成功将显示一个文件管理器窗口
 <br>
 ## 注意事项
 1.下载过程中或出现下载速度过慢的情况可尝试使用VPN改善下载速度
