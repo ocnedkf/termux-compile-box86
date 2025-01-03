@@ -204,7 +204,6 @@ Do you want to continue? [Y/n]
 为了避免编译完成后不必要的运行错误，如拿来运行wine时如果使用不添加此变量编译的box86会遇到一些老游戏的运行报错问题，反之添加此变量就不会有这个问题，详细情况可查看box86作者文档
 <br>
 ## 编译中涉及的第三方app
-<br>
 cmake
 <br>
 文章中作用：用于编译box86的程序，是绝对不可忽略的编译程序
@@ -240,7 +239,7 @@ proot-distro
 官方网站：https://github.com/termux/proot-distro
 <br>
 <br>
-termux
+Termux
 <br>
 文章中作用：用于运行linux程序以编译box86与验证等
 <br>
