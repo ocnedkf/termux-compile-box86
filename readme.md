@@ -225,6 +225,7 @@ gcc
 <br>
 官方网站：https://gcc.gnu.org/
 <br>
+<br>
 python3
 <br>
 文章中作用：在编译过程中用于执行脚本和自动化某些编译任务
@@ -237,6 +238,13 @@ proot-distro
 文章中作用：在Termux中创建一个完整的Linux环境，以便在Android设备上执行编译与Linux程序
 <br>
 官方网站：https://github.com/termux/proot-distro
+<br>
+<br>
+termux
+<br>
+Android终端模拟器，用于运行linux程序以编译box86与验证等
+<br>
+官方网站: https://termux.com/
 
 ## 验证box86时涉及的第三方app：
 Termux:X11
