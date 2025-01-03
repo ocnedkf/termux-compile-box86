@@ -242,7 +242,7 @@ proot-distro
 <br>
 termux
 <br>
-Android终端模拟器，用于运行linux程序以编译box86与验证等
+文章中作用：用于运行linux程序以编译box86与验证等
 <br>
 官方网站: https://termux.com/
 
