@@ -12,17 +12,17 @@
 <br>
 三，安装proot-distro
 <br>
-“pkg update && pkg install proot-distro”
+“pkg update && pkg install proot”
 <br>
-四，在proot-distro中安装旧版本ubuntu（需要等待一段时间）
+四，在proot-distro中安装ubuntu（需要等待一段时间）
 <br>
-“proot-distro install ubuntu-oldlts”
+“proot-distro install ubuntu”
 <br>
 五，进入ubuntu
 <br>
 输入并执行：
 <br>
-“proot-distro login ubuntu-oldlts”
+“proot-distro login ubuntu”
 <br>
 （此后所有步骤均在其中执行)
 <br>
@@ -175,15 +175,6 @@ Do you want to continue? [Y/n]
 “git clone https://github.com/ptitSeb/box86 ”
 <br>
 去执行，如果出现了编译错误，那么你需要通过git checkout命令找出错误点后尝试更改其源代码再继续进行编译
-<br>
-<br>
-问：
-<br>
-为什么要选择旧版本的ubuntu？
-<br>
-答：
-<br>
-这么做是有前车之鉴的哦，如果直接选择目前最新的24.04的ubuntu的话那么在你想验证编译好的且是调整过版本的box86版本可能会遇到libc6段错误，这样你就会无法验证编译好的box86是否能正常使用，而且这也可能间接影响到编译
 <br>
 <br>
 问：
