@@ -64,7 +64,6 @@ cd build
 <br>
 cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=arm -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DBAD_SIGNAL=ON”
 <br>
-<br>
 (2) 编译Release版本：
 <br>
 输入并执行：
@@ -76,6 +75,7 @@ mkdir build
 cd build
 <br>
 cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=arm -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DBAD_SIGNAL=ON”
+<br>
 <br>
 选择DEBUG或Release的其中一个版本以配置编译变量，不要出现任何的字母偏差并执行，等待配置完成（返回root@localhost:~/box86/build#)后输入：
 <br>
