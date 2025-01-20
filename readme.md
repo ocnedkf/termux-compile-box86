@@ -50,7 +50,9 @@
 <br>
 九，编译box86
 <br>
-编译DEBUG版本↓
+从以下两个方案选择你要编译的版本：
+<br>
+(1) 编译DEBUG版本：
 <br>
 输入并执行：
 <br>
@@ -65,7 +67,7 @@ cd build
 cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=arm -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DBAD_SIGNAL=ON”
 <br>
 <br>
-编译Release版本↓
+(2) 编译Release版本：
 <br>
 输入并执行：
 <br>
