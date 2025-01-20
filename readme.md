@@ -44,7 +44,7 @@
 <br>
 “cd
 <br>
-“git clone -b v0.3.2 https://github.com/ptitSeb/box86 ”
+git clone -b v0.3.2 https://github.com/ptitSeb/box86 ”
 <br>
 (出现的警告忽略即可）
 <br>
@@ -56,9 +56,7 @@
 <br>
 输入并执行：
 <br>
-“cd
-<br>
-cd box86
+“cd box86
 <br>
 mkdir build
 <br>
@@ -71,9 +69,7 @@ cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYS
 <br>
 输入并执行：
 <br>
-“cd
-<br>
-cd box86
+“cd box86
 <br>
 mkdir build
 <br>
