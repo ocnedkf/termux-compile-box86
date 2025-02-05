@@ -138,7 +138,7 @@ git clone --recurse-submodules https://github.com/termux/termux-x11
 <br>
 termux-x11 :1 -xstartup "box86 wine explorer /desktop=1270x720 explorer"
 <br>
-启动后，保持Termux运行并打开Termux:X11。若显示文件管理器窗口即为验证成功
+启动后，保持Termux运行并打开Termux:X11。若显示"Wine正在更新位于/root/.wine下的wine文件，请稍后"或文件管理器窗口即为验证成功
 <br>
 ## 注意事项
 1.下载过程中或出现下载速度过慢的情况可尝试使用VPN改善下载速度
