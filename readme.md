@@ -6,23 +6,23 @@
 <br>
 二，打开Termux，赋予通知权限，输入并执行：
 <br>
-“termux-setup-storage”
+termux-setup-storage
 <br>
 等待一段时间后在弹出的对话框内赋予存储权限，在返回#后进行下一步（自此之后每一步都需要在termux中进行）
 <br>
 三，安装proot-distro
 <br>
-“pkg update && pkg install proot”
+pkg update && pkg install proot
 <br>
 四，在proot-distro中安装ubuntu（需要等待一段时间）
 <br>
-“proot-distro install ubuntu”
+proot-distro install ubuntu
 <br>
 五，进入ubuntu
 <br>
 输入并执行：
 <br>
-“proot-distro login ubuntu”
+proot-distro login ubuntu
 <br>
 （此后所有步骤均在其中执行)
 <br>
@@ -30,21 +30,19 @@
 <br>
 输入并执行：
 <br>
-“apt update && apt install git cmake build-essential gcc python3”
+apt update && apt install git cmake build-essential gcc python3
 <br>
 七，补充编译box86所必要的arm依赖库
 <br>
 输入并执行：
 <br>
-“dpkg --add-architecture armhf && apt update && apt install gcc-arm-linux-gnueabihf”
+dpkg --add-architecture armhf && apt update && apt install gcc-arm-linux-gnueabihf
 <br>
 八，下载box86(以0.3.2版本举例)
 <br>
 输入并执行：
 <br>
-“cd
-<br>
-git clone -b v0.3.2 https://github.com/ptitSeb/box86 ”
+git clone -b v0.3.2 https://github.com/ptitSeb/box86
 <br>
 (出现的警告忽略即可）
 <br>
@@ -56,30 +54,30 @@ git clone -b v0.3.2 https://github.com/ptitSeb/box86 ”
 <br>
 输入并执行：
 <br>
-“cd box86
+cd box86
 <br>
 mkdir build
 <br>
 cd build
 <br>
-cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=arm -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DBAD_SIGNAL=ON”
+cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=arm -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DBAD_SIGNAL=ON
 <br>
 (2) 编译Release版本：
 <br>
 输入并执行：
 <br>
-“cd box86
+cd box86
 <br>
 mkdir build
 <br>
 cd build
 <br>
-cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=arm -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DBAD_SIGNAL=ON”
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=arm -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc -DBAD_SIGNAL=ON
 <br>
 <br>
 选择DEBUG或Release的其中一个版本以配置编译变量，不要出现任何的字母偏差并执行，等待配置完成（返回root@localhost:~/box86/build#)后输入：
 <br>
-“cmake --build . -j $(nproc)”
+cmake --build . -j $(nproc)
 <br>
 开始编译，需要一段很长的时间，等待编译完成后即可使用
 <br>
@@ -92,12 +90,12 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PRO
 ## 验证编译成果
 一，紧接上面步骤输入并执行：
 <br>
-“make install”
+make install
 <br>
 以安装box86
 <br>
 二，补充运行box86的依赖库，输入并执行：
-“dpkg --add-architecture armhf && apt update && apt install libc6:armhf libstdc++6:armhf libx11-6:armhf libgl1-mesa-glx:armhf libpulse0:armhf libappindicator1:armhf libnm0:armhf”
+dpkg --add-architecture armhf && apt update && apt install libc6:armhf libstdc++6:armhf libx11-6:armhf”
 以确保box86能正常运行
 <br>
 三，你可通过实施两种方案的其中一个验证box86:
@@ -105,7 +103,7 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PRO
 方案1  通过让box86返回版本信息以验证
 <br>
 输入并执行：
-“box86 --version”
+box86 --version
 <br>
 若命令返回版本信息，则验证成功
 <br>
@@ -116,13 +114,13 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PRO
 <br>
 步骤1 配置Wine的运行权限与环境变量，输入并执行：
 <br>
-“cd /opt/wine/bin 
+cd /opt/wine/bin 
 <br>
 chmod -R 777 *
 <br>
 export BOX86_PATH=/opt/wine/bin
 <br>
-export BOX86_LD_LIBRARY_PATH=/opt/wine/lib”
+export BOX86_LD_LIBRARY_PATH=/opt/wine/lib
 <br>
 将“/opt/wine/bin”和“/opt/wine/lib”替换成实际路径，并要注意wine不可在非ubuntu环境内
 <br>
@@ -145,7 +143,7 @@ termux-x11 :13 -xstartup "box86 wine explorer /desktop=1270x720 explorer"
 <br>
 2.如果在执行第八步出现延迟过大的报错时可关闭VPN，将命令改成：
 <br>
-“git clone -b v0.3.2 https://bgithub.xyz/ptitSeb/box86.git ”
+git clone -b v0.3.2 https://bgithub.xyz/ptitSeb/box86.git
 <br>
 并执行
 <br>
