@@ -136,7 +136,7 @@ git clone --recurse-submodules https://github.com/termux/termux-x11
 <br>
 步骤3 使用以下命令启动Termux:X11，并运行box86与wine：
 <br>
-termux-x11 :1 -xstartup "box86 wine explorer /desktop=1270x720 explorer"
+termux-x11 :13 -xstartup "box86 wine explorer /desktop=1270x720 explorer"
 <br>
 启动后，保持Termux运行并打开Termux:X11。若显示"Wine正在更新位于/root/.wine下的wine文件，请稍后"或文件管理器窗口即为验证成功
 <br>
