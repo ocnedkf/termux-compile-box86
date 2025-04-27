@@ -38,11 +38,11 @@ apt update && apt install git cmake build-essential gcc python3
 <br>
 dpkg --add-architecture armhf && apt update && apt install gcc-arm-linux-gnueabihf
 <br>
-八，下载box86(以0.3.2版本举例)
+八，下载box86
 <br>
 输入并执行：
 <br>
-git clone -b v0.3.2 https://github.com/ptitSeb/box86
+git clone -b https://github.com/ptitSeb/box86
 <br>
 (出现的警告忽略即可）
 <br>
@@ -141,9 +141,9 @@ termux-x11 :13 -xstartup "box86 wine explorer /desktop=1270x720 explorer"
 ## 注意事项
 1.下载过程中或出现下载速度过慢的情况可尝试使用VPN改善下载速度
 <br>
-2.如果在执行第八步出现延迟过大的报错时可关闭VPN，将命令改成：
+2.若在执行第八步出现延迟过大的报错时，可尝试将克隆源切换为镜像网站，以bgithub.xyz举例，确保未使用VPN并将命令改成：
 <br>
-git clone -b v0.3.2 https://bgithub.xyz/ptitSeb/box86.git
+git clone https://bgithub.xyz/ptitSeb/box86.git
 <br>
 并执行
 <br>
@@ -153,42 +153,11 @@ Do you want to continue? [Y/n]
 <br>
 这里务必输入“y”并执行才可下载，每次都需要重复执行，无须担心，但需要注意下载后和解压后需要的空间，以防手机空间不足
 <br>
-4.此仓库中以编译0.3.2版本举例，如果你需要编译特定的版本，你要把第八步中v后面改成你想要编译的版本，若为新版本可能还要改源代码或以直接编译方式而并非跨架构方式编译以避免编译中可能产生的错误，这里要考虑到这两步可能都要一起做
+4.若需要编译特定版本的Box86，可在克隆时添加-b选项并填入对应的版本号。例如，要克隆并编译版本v0.3.2，可以运行以下命令：
 <br>
-5.如果想要不动源码去编译出正常的box86，你只能编译大概0.3.2及以下的版本
+git clone -b v0.3.2 https://github.com/ptitSeb/box86.git
 <br>
 6.执行步骤之前应考虑手机是否满足条件，手机应为Android系统且不低于7.0版本，并确保上网功能正常，剩余存储空间应不低于1G
-<br>
-## 疑惑解答
-问：
-<br>
-为什么要手动设置版本下载，难道直接下载编译目前最新的box86版本不好吗？
-<br>
-答：
-<br>
-首先，各位要清楚一个问题，所有的东西并不是版本越新越好，这包括box86，如果直接默认下载box86会出现一些警告(不正确的格式说明符等)或编译错误(error1与error2)，即使成功编译也会有一些故障，如在wine中渲染异常等。而这只是通过正常的编译步骤去编译，要想排查最新版box86的故障，必须得利用git checkout命令，跳转到指定的某条提交，然后加以锁定具体原因并更改，如此才能具备编译最新版box86的能力，编译最新版不是光知道编译命令就行的。如果你想编译最新版box86，那么你可以把第八步改成：
-<br>
-“git clone https://github.com/ptitSeb/box86 ”
-<br>
-去执行，如果出现了编译错误，那么你需要通过git checkout命令找出错误点后尝试更改其源代码再继续进行编译
-<br>
-<br>
-问：
-<br>
-为什么设置编译时要把变量设置的那么详细？
-<br>
-答：
-<br>
-为了设置跨架构编译以避免遇到error1与error2的报错失败和大量的警告
-<br>
-<br>
-问：
-<br>
-设置“-DBAD_SIGNAL=ON”变量有什么用？
-<br>
-答：
-<br>
-为了避免编译完成后不必要的运行错误，如拿来运行wine时如果使用不添加此变量编译的box86会遇到一些老游戏的运行报错问题，反之添加此变量就不会有这个问题，详细情况可查看box86作者文档
 <br>
 ## 编译中涉及的第三方app
 cmake
