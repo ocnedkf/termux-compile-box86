@@ -42,9 +42,7 @@ dpkg --add-architecture armhf && apt update && apt install gcc-arm-linux-gnueabi
 <br>
 输入并执行：
 <br>
-git clone -b https://github.com/ptitSeb/box86
-<br>
-(出现的警告忽略即可）
+git clone https://github.com/ptitSeb/box86
 <br>
 九，编译box86
 <br>
