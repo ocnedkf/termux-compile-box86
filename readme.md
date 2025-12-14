@@ -36,7 +36,7 @@ apt update && apt install git cmake build-essential gcc python3
 <br>
 输入并执行：
 <br>
-dpkg --add-architecture armhf && apt update && apt install gcc-arm-linux-gnueabihf
+dpkg --add-architecture armhf && apt update && apt -y install gcc-arm-linux-gnueabihf
 <br>
 八，下载box86
 <br>
@@ -90,11 +90,9 @@ make install
 <br>
 以安装box86
 <br>
-二，补充运行box86的依赖库，输入并执行：
-dpkg --add-architecture armhf && apt update && apt install libc6:armhf libstdc++6:armhf libx11-6:armhf”
 以确保box86能正常运行
 <br>
-三，你可通过实施两种方案的其中一个验证box86:
+二，你可通过实施两种方案的其中一个验证box86:
 <br>
 方案1  通过让box86返回版本信息以验证
 <br>
@@ -121,9 +119,9 @@ export BOX86_LD_LIBRARY_PATH=/opt/wine/lib
 将“/opt/wine/bin”和“/opt/wine/lib”替换成实际路径，并要注意wine不可在非ubuntu环境内
 <br>
 <br>
-步骤2 安装Termux:X11程序：
+步骤2 安装Termux:X11程序(在宿主环境内)：
 <br>
-git clone --recurse-submodules https://github.com/termux/termux-x11
+pkg install termux-x11
 <br>
 等待命令完全执行完成，以确保Termux:X11程序的正确安装
 <br>
@@ -143,17 +141,11 @@ git clone https://bgithub.xyz/ptitSeb/box86.git
 <br>
 并执行
 <br>
-3.在上述执行下载步骤时均会遇到以下提示
-<br>
-Do you want to continue? [Y/n]
-<br>
-这里务必输入“y”并执行才可下载，每次都需要重复执行，无须担心，但需要注意下载后和解压后需要的空间，以防手机空间不足
-<br>
-4.若需要编译特定版本的Box86，可在克隆时添加-b选项并填入对应的版本号。例如，要克隆并编译版本v0.3.2，可以运行以下命令：
+3.若需要编译特定版本的Box86，可在克隆时添加-b选项并填入对应的版本号。例如，要克隆并编译版本v0.3.2，可以运行以下命令：
 <br>
 git clone -b v0.3.2 https://github.com/ptitSeb/box86.git
 <br>
-6.执行步骤之前应考虑手机是否满足条件，手机应为Android系统且不低于7.0版本，并确保上网功能正常，剩余存储空间应不低于1G
+4.执行步骤之前应考虑手机是否满足条件，手机应为Android系统且不低于7.0版本，并确保上网功能正常，剩余存储空间应不低于1G
 <br>
 ## 编译中涉及的第三方app
 cmake
