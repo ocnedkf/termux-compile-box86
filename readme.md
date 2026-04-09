@@ -12,7 +12,7 @@ termux-setup-storage
 <br>
 三，安装proot-distro
 <br>
-pkg update && pkg install proot
+pkg update && pkg install proot proot-distro
 <br>
 四，在proot-distro中安装ubuntu（需要等待一段时间）
 <br>
